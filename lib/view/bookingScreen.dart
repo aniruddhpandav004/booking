@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:onlineboooking/view/tabs/bus.dart';
-import 'package:onlineboooking/view/tabs/hotel.dart';
 import 'package:onlineboooking/view/tabs/movie.dart';
 import 'package:onlineboooking/view/tabs/train.dart';
 
@@ -15,7 +14,7 @@ class _OnlineBookingState extends State<OnlineBooking> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
@@ -60,16 +59,6 @@ class _OnlineBookingState extends State<OnlineBooking> {
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
-                Tab(
-                  icon: Icon(
-                    Icons.hotel,
-                    color: Colors.black,
-                  ),iconMargin: EdgeInsets.all(10),
-                  child: Text(
-                    "HOTELS",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ),
               ],
             ),
           ),
@@ -78,7 +67,6 @@ class _OnlineBookingState extends State<OnlineBooking> {
               Train(),
               Bus(),
               Movie(),
-              Hotel(),
             ],
           ),
         ),
